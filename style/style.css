@@ -113,12 +113,12 @@
     color: black;
 }
 
-.datepicker .dates .days .day.selected
+.datepicker .dates .days .day .selected
 {
-    background-color: burlywood;
+    background-color: aqua;
 }
 
 .datepicker .dates .days .day.current
 {
-    background-color: aqua;
+    background-color: blue;
 }
