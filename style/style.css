@@ -1,0 +1,19 @@
+.header
+{
+ background-color: aqua;
+ border-radius: 12px;
+ height: 40px;
+}
+
+#header-nav-menu
+{ 
+    display: block;
+    padding: 10px;
+}
+
+#datepicker
+{
+    height: 120px;
+    width: 200px;
+    background-color: bisque;
+}
