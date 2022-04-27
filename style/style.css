@@ -1,6 +1,9 @@
 *
 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .header
@@ -108,4 +111,14 @@
     justify-content: center;
     align-items: center;
     color: black;
+}
+
+.datepicker .dates .days .day.selected
+{
+    background-color: burlywood;
+}
+
+.datepicker .dates .days .day.current
+{
+    background-color: aqua;
 }
