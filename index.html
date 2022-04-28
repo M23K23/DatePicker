@@ -6,8 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New-Website</title>
     <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/DatePickerV2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 </head>
 <body>
+    <label>
+        <input type="checkbox">
+        <span class="check"></span>
+    </label>
     <H1>DatePicker v.1 (test)</H1>
     <div class="datepicker">
         <div class="selected-date"></div>
@@ -26,10 +33,30 @@
 
 <h1>DatePicker v.2</h1>
 
-<div class="content">
-    
+<button class="modalWindow-button">DatePicker</button>
+
+<div class="modal">
+    <div class="modal-overlay">
+<div class="modalWindow ">
+    <div class="Mode">
+        <input type="checkbox" class="checkbox" id="checkbox">
+        <label for="checkbox" class="label">
+            <i class="fa fa-moon-o"></i>
+            <i class="fa fa-sun-o"></i>
+            <div class="ball"></div>
+        </label>
+    </div>
+        <div class="modalWindow-content">
+            <div class="datePickerV2">
+                
+            </div>
+        </div>
+
+</div>
+</div>
 </div>
 
 </body>
 <script src="/js/code.js"></script>
+<script src="/js/DatePickerV2.js"></script>
 </html>

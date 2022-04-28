@@ -1,3 +1,6 @@
+//This is code for DatePicker V1
+
+//list of required variables
 const date_picker_element= document.querySelector('.datepicker');
 const selected_date_element= document.querySelector('.datepicker .selected-date');
 const dates_element= document.querySelector('.datepicker .dates');
@@ -6,13 +9,17 @@ const next_mth_element= document.querySelector('#next-mth');
 const prev_mth_element= document.querySelector('#prev-mth');
 const days_element= document.querySelector('.datepicker .dates .days');
 
+
+// Array of months
 const months= ['January', 'February', 'March', 'April', 'May', 'June','July', 'August', 'September','October','November','December'];
 
+//Variables for getting the date
 let date= new Date();
 let day= date.getDate();
 let month=date.getMonth();
 let year = date.getFullYear();
 
+//Variables for show selected date on DatePicker
 let selectedDate= date;
 let selectedDay=day;
 let selectedMont=month;
@@ -24,18 +31,19 @@ mth_element.textContent=months[month]+ ' ' + year;
 
 selected_date_element.textContent=formatDate(date);
 
-
+// Events List
 date_picker_element.addEventListener('click', toggleDatePicker);
 next_mth_element.addEventListener('click', goToNextMonth);
 prev_mth_element.addEventListener('click', goToPrevMonth);
 
 
-
+//Function for toggle DatePicker
 function toggleDatePicker(e) 
 {   
     if(!checkEventPathForClass(e.path, 'dates')){ dates_element.classList.toggle('active');}
 }
 
+//Function for show days on datePicker
 function populateDates(e)
 {
     days_element.innerHTML= '';
@@ -73,6 +81,8 @@ function populateDates(e)
     }
 }
 
+
+//Change month to next
 function goToNextMonth(e){ 
 
     let test;
@@ -88,6 +98,7 @@ function goToNextMonth(e){
     populateDates();
 }
 
+//Change month to previous
 function goToPrevMonth(e){
     month--;
     if(month<0)
@@ -98,8 +109,6 @@ function goToPrevMonth(e){
     mth_element.textContent=months[month] + ' ' + year;
     populateDates();
 }
-
-
 
 function checkEventPathForClass (path, selector)
 {
@@ -114,6 +123,8 @@ function checkEventPathForClass (path, selector)
     return false;
 }
 
+
+//Function for formating the date on datePicker
 function formatDate(d)
 {
     let day=d.getDate();
