@@ -6,11 +6,15 @@
     box-sizing: border-box;
 }
 
-.header
+h1
 {
- background-color: aqua;
- border-radius: 12px;
- height: 40px;
+    text-align: center;
+    justify-content: center;
+}
+
+body
+{
+    background-color: rgba(38, 156, 9, 0.349) ;
 }
 
 #header-nav-menu
